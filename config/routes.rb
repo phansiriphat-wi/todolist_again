@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Home
-  root "sessions#new"
+  root "taks#index"
+  
 
   # Products
   resources :products
@@ -17,5 +18,6 @@ Rails.application.routes.draw do
 
   # Logout
   delete "/logout", to: "sessions#destroy", as: :logout
+  
 
 end
